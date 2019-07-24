@@ -1,5 +1,5 @@
 # curriculum-format
 
 ```
-$ $ git submodule add git@github.com:Techpit-Market/curriculum-format.git
+$ git submodule add git@github.com:Techpit-Market/curriculum-format.git
 ```
