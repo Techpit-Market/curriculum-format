@@ -1,38 +1,46 @@
 # curriculum-format
-curriculum-format は[0章](https://techpit-market.gitbook.io/host-guide/4/4-2)と[1章以降のフォーマット](https://techpit-market.gitbook.io/host-guide/4/4-3)を導入するためのリポジトリです。
+教材を管理するリポジトリ。
 
+リポジトリは以降で説明する規則で管理されます。
 
-## curriculum-format の導入方法
-まず、教材を執筆するリポジトリ内で以下のコマンドを実行して、Gitサブモジュールを追加してください。
+## ディレクトリ階層規則
+- curriculumディレクトリの配下に章ディレクトリを配置する
+- 章ディレクトリ配下にはマークダウン形式のパートファイルを配置する
 
-```console
-git submodule add git@github.com:Techpit-Market/curriculum-format.git
+### ファイル命名規則
+- 章ディレクトリは「章番号. 章タイトル」のように章番号とドット(.)と半角空白の後に章タイトルを付けて管理
+- パートファイルも同様に「パート番号. パートタイトル.md」のような形式にする
+
+### 例
 ```
-
-上記のコマンドを実行すると、`curriculum-format`というディレクトリがリポジトリに追加されます。
-
+./curriculum
+  └── 0. はじめに
+  │     └── 1. Trello風ToDoタスク管理アプリを作成しよう！.md
+  │     └── 2. Ruby on Railsの環境構築 (macOS).md
+  │     └── 3. Cloud9を利用する手順.md
+  │     └── 4. kanbanの設計を考える.md
+  │     └── 5. エラーが出たときの心得.md
+  │
+  └── 1. 新規Railsアプリケーションの作成
+  │     └── 1. 新規Railsプロジェクトの作成 (Rails6).md
+  │
+  └── 2. トップページの作成
+  │     └── 1. MVCについて学ぼう.md
+  │     └── 2. 仮のトップページを表示.md
+   ...
 ```
-curriculum-format
-├── 0章のフォーマット
-├── 1章以降のフォーマット.md
-├── README.md
-└── 簡易手順書のサンプル例.md
-```
-
-これで curriculum-format の導入は完了です。
-
 
 ## curriculum-formatの使い方
 
 ### 0章を執筆する場合
-教材のパートを執筆する前に、`0章のフォーマット`ディレクトリ内の`0-1 教材の概要.md`や`0-2 環境構築.md`ファイルのマークダウンをコピー&ペーストしてカリキュラムを執筆してください。
+教材のパートを執筆する際は、`curriculum/0. はじめに`ディレクトリ内の`1. 教材の概要.md`や`2. 環境構築.md`などのファイルのマークダウンフォーマットの案内に従いながら書き換えてカリキュラムを執筆してください。
 
-`0章のフォーマット`ディレクトリの内容はお渡しした[スタイルガイド](https://techpit-market.gitbook.io/host-guide/)の[4-2 セクション0 (0章) を執筆する](https://techpit-market.gitbook.io/host-guide/4/4-2)の内容を元に作成しています。
+`curriculum/0. はじめに`ディレクトリの内容はお渡しした[スタイルガイド](https://techpit-market.gitbook.io/host-guide/)の[4-2 セクション0 (0章) を執筆する](https://techpit-market.gitbook.io/host-guide/4/chapter0)の内容などを元に作成しています。
 
 
 ### 1章以降を執筆する場合
-教材のパートを執筆する前に、`curriculum-format`ディレクトリ内の`1章以降のフォーマット.md`ファイルのマークダウンをコピー&ペーストしてカリキュラムを執筆してください。
+教材のパートを執筆する前に、`curriculum/1. xxx`ディレクトリ内の`1. 1章以降のフォーマット.md`ファイルのマークダウンをコピー&ペーストして案内に従いながらカリキュラムを執筆してください。
 
-`1章以降のフォーマット.md`の内容はお渡しした[スタイルガイド](https://techpit-market.gitbook.io/host-guide/)の[4-3 セクション1以降を執筆する](https://techpit-market.gitbook.io/host-guide/4/4-3)の内容を元に作成しています。
+`1. 1章以降のフォーマット.md`の内容はお渡しした[スタイルガイド](https://techpit-market.gitbook.io/host-guide/)の[4-3 セクション1以降を執筆する](https://techpit-market.gitbook.io/host-guide/4/chapter1)の内容を元に作成しています。
 
 curriculum-format に関して何か不明点や要望がございましたらお気軽にSlackでご連絡ください。よろしくお願いいたします。
